@@ -117,6 +117,32 @@ section,section:nth-child(odd),section:nth-child(even){background:rgba(245,231,2
 section:nth-child(even){background:rgba(255,249,239,.76)!important}
 @media(max-width:750px){body::before,body::after{opacity:.7!important}}
 </style>
+<style>
+
+/* AJUSTE: MARCOS MAS ALTOS Y TARJETAS INTERIORES SUAVES */
+.frame{
+  max-width:790px!important;
+  min-height:760px!important;
+  padding:115px 70px!important;
+  margin:35px auto!important;
+}
+.frame-content{
+  background:rgba(255,249,239,.54)!important;
+  border:1px solid rgba(255,249,239,.25)!important;
+  border-radius:18px!important;
+  box-shadow:none!important;
+  backdrop-filter:blur(2px);
+  -webkit-backdrop-filter:blur(2px);
+  max-width:540px!important;
+  padding:28px 25px!important;
+  color:#654B3C!important;
+}
+.frame-content h2,.frame-content h3{color:#963541!important}
+@media(max-width:600px){
+ .frame{min-height:660px!important;padding:100px 35px!important;margin:25px auto!important}
+ .frame-content{padding:20px 13px!important;background:rgba(255,249,239,.56)!important}
+}
+</style>
 </head>
 <body>
 <video id="holidayVideo" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="fondo.mp4" type="video/mp4"></video>
@@ -147,3 +173,4 @@ function countdown(){const target=new Date('2026-12-24T19:00:00-07:00').getTime(
 const snow=document.getElementById('snow');for(let i=0;i<24;i++){const f=document.createElement('span');f.className='flake';f.textContent='❄';f.style.left=Math.random()*100+'%';f.style.opacity=(.15+Math.random()*.35).toFixed(2);f.style.fontSize=(9+Math.random()*13)+'px';f.style.animationDuration=(9+Math.random()*14)+'s';f.style.animationDelay=(-Math.random()*18)+'s';snow.appendChild(f)}
 </script>
 </body></html>
+
