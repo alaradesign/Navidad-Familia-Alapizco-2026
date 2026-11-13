@@ -147,6 +147,38 @@ section:nth-child(even){background:rgba(255,249,239,.76)!important}
 @keyframes entradaSobre{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:600px){.cover-envelope{width:min(72%,235px);margin-bottom:10px}}
 @media(prefers-reduced-motion:reduce){.cover-envelope{animation:none}}
+/* Ilustraciones PNG sin recuadros, adaptables a móviles */
+.cover-envelope{display:block;width:min(75%,260px);height:auto;object-fit:contain;margin:0 auto 18px;background:transparent;border:0;box-shadow:none}
+#abrazo .decor-bow{max-width:170px;width:45%;height:auto;background:transparent}
+#confirmar .decor{max-width:150px;width:40%;height:auto;background:transparent}
+@media(max-width:600px){.cover-envelope{width:min(70%,210px)}}
+/* AJUSTES FINALES: RECUADROS ALARGADOS, TEXTO CENTRADO E ILUSTRACIONES MÁS GRANDES */
+.coverbox{
+  width:min(94vw,700px)!important;
+  max-width:700px!important;
+  min-height:780px;
+  padding:58px 36px!important;
+  margin:20px auto;
+  text-align:center!important;
+}
+.coverbox h1,.coverbox h2,.coverbox p,.coverbox .smallcaps,
+.frame-content,.frame-content h2,.frame-content h3,.frame-content p{
+  text-align:center!important;
+}
+.frame{min-height:850px!important;max-width:810px!important;}
+.frame-content{max-width:590px!important;margin:0 auto!important;text-align:center!important;}
+#abrazo .decor-bow{width:70%!important;max-width:260px!important;height:auto!important;}
+#confirmar .decor{width:66%!important;max-width:245px!important;height:auto!important;}
+@media(max-width:600px){
+  .coverbox{width:100%!important;min-height:730px;padding:45px 20px!important;}
+  .frame{min-height:740px!important;padding:92px 28px!important;}
+  .frame-content{padding:24px 18px!important;}
+  #abrazo .decor-bow{width:65%!important;max-width:225px!important;}
+  #confirmar .decor{width:62%!important;max-width:210px!important;}
+}
+/* Ilustración de Feliz Navidad en el cierre de Alara Design */
+.feliz-navidad-footer{display:block;width:min(72%,320px);height:auto;object-fit:contain;margin:26px auto 12px;border:0;background:transparent;box-shadow:none}
+@media(max-width:600px){.feliz-navidad-footer{width:min(75%,265px)}}
 </style>
 </head>
 <body>
@@ -156,16 +188,16 @@ section:nth-child(even){background:rgba(255,249,239,.76)!important}
 <div class="snow" aria-hidden="true" id="snow"></div>
 <audio id="music" src="musica-autorizada.mp3" loop preload="none"></audio>
 <button class="music" id="musicButton" type="button" aria-label="Pausar música" title="Pausar o reproducir música">♫</button>
-<div id="cover"><div class="coverbox"><img class="cover-envelope" src="INVITACION.PNG" alt="Sobre navideño de la Familia Alapizco"><div class="ornament">✦ 🎄 ✦</div><p class="smallcaps">Una invitación hecha con amor</p><h1>Navidad</h1><p class="script-line">en familia</p><h2 style="margin:0 0 18px">Alapizco 2026</h2><p class="lead">Hay regalos que no se envuelven, se viven. Y el más hermoso de esta Navidad será volver a estar juntos.</p><button class="btn" id="openButton" type="button">🎁 Abrir mi invitación</button><p class="note">Toca para descubrir nuestra celebración navideña</p></div></div>
+<div id="cover"><div class="coverbox"><img class="cover-envelope" src="INVITACION.PNG" alt="Invitación navideña de la Familia Alapizco"><div class="ornament">✦ 🎄 ✦</div><p class="smallcaps">Una invitación hecha con amor</p><h1>Navidad</h1><p class="script-line">en familia</p><h2 style="margin:0 0 18px">Alapizco 2026</h2><p class="lead">Hay regalos que no se envuelven, se viven. Y el más hermoso de esta Navidad será volver a estar juntos.</p><button class="btn" id="openButton" type="button">🎁 Abrir mi invitación</button><p class="note">Toca para descubrir nuestra celebración navideña</p></div></div>
 <main>
 <section><div class="inner"><div class="frame frame-one"><div class="frame-content"><p class="smallcaps">Con todo nuestro cariño</p><h2>¡Bienvenidos a nuestra Navidad!</h2><p class="script-line">con todo nuestro amor</p><p>Las puertas de nuestro hogar se abren para recibir lo más valioso que tenemos: nuestra familia.</p><p>Que esta Navidad nos regale abrazos sinceros, nuevas memorias y la alegría de seguir compartiendo nuestras tradiciones.</p></div></div><p class="lead">Dos días para celebrar lo que nos une. ❤️</p></div></section>
 <section id="fechas"><div class="inner"><h2>🎄 Dos días, una misma familia</h2><div class="dategrid"><div class="datecard"><span>DICIEMBRE 2026</span><strong>24</strong><h3>Nochebuena</h3><p>Jueves</p><p><b>7:00 p. m.</b> · Bienvenida<br><b>8:00 p. m.</b> · Actividades</p></div><div class="datecard"><span>DICIEMBRE 2026</span><strong>25</strong><h3>Recalentado</h3><p>Viernes</p><p><b>Horario por confirmar</b></p><p>¡Porque una noche no basta para compartir en familia!</p></div></div><p>📍 Casa de la Familia Alapizco Arámburo</p><a class="btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/SqFHtWwg4qgwfhgo8">📍 Cómo llegar</a><div class="panel"><h3>Cuenta regresiva para Nochebuena</h3><p id="countdown" aria-live="off">Preparando la magia…</p></div></div></section>
 <section id="vestimenta"><div class="inner"><h2>🎨 Nuestra Navidad tiene color</h2><p>Cuatro familias, cuatro colores, una sola Navidad.</p><div class="panel outfit"><div class="family"><span class="dot" style="background:#e00000"></span><div><b>Familia González Alapizco</b>ROJO</div></div><div class="family"><span class="dot" style="background:#0825e8"></span><div><b>Familia Carrillo Alapizco</b>AZUL REY</div></div><div class="family"><span class="dot" style="background:#007b24"></span><div><b>Familia Solís Alapizco</b>VERDE BANDERA</div></div><div class="family"><span class="dot" style="background:#783908"></span><div><b>Familia Alapizco Arámburo</b>CAFÉ INTEGRAL</div></div><p><i>El color nos distingue, pero el amor de familia nos une.</i></p></div></div></section>
 <section id="programa"><div class="inner"><h2>✨ Nuestra mágica Nochebuena</h2><p>24 de diciembre · A partir de las 7:00 p. m.</p><div class="frame frame-four"><div class="frame-content"><h3>Programa familiar</h3><ul class="timeline"><li>🎄 7:00 p. m. · Bienvenida y mesa de snacks</li><li>🕯️ A partir de las 8:00 p. m. · Canto tradicional de la posada</li><li>🍽️ Cena navideña</li><li>🪅 Piñata</li><li>🎤 Karaoke</li><li>🎟️ Rifa navideña</li><li>🎁 Intercambio navideño: ¡entre regalos y bromas!</li><li>❤️ Abrazo de Navidad</li><li>✨ Velada familiar</li></ul><p class="note">Los horarios individuales de las actividades se definirán posteriormente.</p></div></div></div></section>
-<section id="abrazo"><div class="inner"><img class="decor decor-bow" src="recuadro%20-5.png" alt="Adorno navideño" onerror="this.style.display='none'"><h2>❤️ El abrazo de Navidad</h2><p class="script-line">lo más bonito es estar juntos</p><p class="lead">«Mientras tengamos la dicha de reunirnos, siempre tendremos un motivo para agradecer. Que nunca nos falten los abrazos, las risas y el amor que nos une».</p></div></section>
-<section id="confirmar"><div class="inner"><img class="decor" src="recuadro-3.png" alt="Sobre navideño" onerror="this.style.display='none'"><h2>💌 Confirma tu asistencia</h2><p>Ayúdanos a organizar la cena y el recalentado indicando cuántas personas asistirán a cada día.</p><div class="panel"><form id="rsvp" class="formbox"><label for="guest">Tu nombre</label><input id="guest" name="guest" required maxlength="100" placeholder="Escribe tu nombre"><label for="family">¿De qué familia vienes?</label><select id="family" required><option value="" selected disabled>Selecciona tu familia</option><option>González Alapizco</option><option>Carrillo Alapizco</option><option>Solís Alapizco</option><option>Alapizco Arámburo</option></select><label for="day24">🎄 24 de diciembre · Cena navideña</label><select id="day24" required></select><label for="day25">🍲 25 de diciembre · Recalentado</label><select id="day25" required></select><p class="note">Selecciona 0 si no asistirán ese día. Puedes confirmar cantidades diferentes para cada fecha.</p><button class="btn" type="submit">💬 Confirmar por WhatsApp</button><p class="note">Se abrirá WhatsApp con el mensaje preparado. Recuerda presionar Enviar para completar tu confirmación.</p></form></div></div></section>
+<section id="abrazo"><div class="inner"><img class="decor decor-bow" src="PINO.png" alt="Adorno navideño" onerror="this.style.display='none'"><h2>❤️ El abrazo de Navidad</h2><p class="script-line">lo más bonito es estar juntos</p><p class="lead">«Mientras tengamos la dicha de reunirnos, siempre tendremos un motivo para agradecer. Que nunca nos falten los abrazos, las risas y el amor que nos une».</p></div></section>
+<section id="confirmar"><div class="inner"><img class="decor" src="SOBRE.png" alt="Sobre navideño" onerror="this.style.display='none'"><h2>💌 Confirma tu asistencia</h2><p>Ayúdanos a organizar la cena y el recalentado indicando cuántas personas asistirán a cada día.</p><div class="panel"><form id="rsvp" class="formbox"><label for="guest">Tu nombre</label><input id="guest" name="guest" required maxlength="100" placeholder="Escribe tu nombre"><label for="family">¿De qué familia vienes?</label><select id="family" required><option value="" selected disabled>Selecciona tu familia</option><option>González Alapizco</option><option>Carrillo Alapizco</option><option>Solís Alapizco</option><option>Alapizco Arámburo</option></select><label for="day24">🎄 24 de diciembre · Cena navideña</label><select id="day24" required></select><label for="day25">🍲 25 de diciembre · Recalentado</label><select id="day25" required></select><p class="note">Selecciona 0 si no asistirán ese día. Puedes confirmar cantidades diferentes para cada fecha.</p><button class="btn" type="submit">💬 Confirmar por WhatsApp</button><p class="note">Se abrirá WhatsApp con el mensaje preparado. Recuerda presionar Enviar para completar tu confirmación.</p></form></div></div></section>
 <section id="despedida"><div class="inner"><div class="frame frame-two"><div class="frame-content"><h2>¡Los esperamos con mucho cariño!</h2><p>Que la magia de la Navidad nos encuentre juntos, agradecidos y rodeados de quienes más amamos.</p><p>Familia Alapizco · 24 y 25 de diciembre de 2026</p></div></div></div></section>
-<footer><h2>✨ Alara Design ✨</h2><p>Creamos invitaciones que cuentan historias y convierten momentos especiales en recuerdos inolvidables.</p><p>¿Tienes un evento especial? Diseñemos juntos una invitación única.</p><a class="btn" target="_blank" rel="noopener noreferrer" href="https://wa.me/526692481161?text=Hola%2C%20vi%20una%20invitaci%C3%B3n%20digital%20de%20Alara%20Design%20y%20me%20gustar%C3%ADa%20recibir%20una%20cotizaci%C3%B3n%20para%20mi%20evento.">💌 Cotiza tu invitación</a><p class="note">Diseñado con amor por Alara Design © 2026</p></footer>
+<footer><h2>✨ Alara Design ✨</h2><p>Creamos invitaciones que cuentan historias y convierten momentos especiales en recuerdos inolvidables.</p><p>¿Tienes un evento especial? Diseñemos juntos una invitación única.</p><a class="btn" target="_blank" rel="noopener noreferrer" href="https://wa.me/526692481161?text=Hola%2C%20vi%20una%20invitaci%C3%B3n%20digital%20de%20Alara%20Design%20y%20me%20gustar%C3%ADa%20recibir%20una%20cotizaci%C3%B3n%20para%20mi%20evento.">💌 Cotiza tu invitación</a><img class="feliz-navidad-footer" src="FELIZ-NAVIDAD.png" alt="Feliz Navidad" loading="lazy"><p class="note">Diseñado con amor por Alara Design © 2026</p></footer>
 </main>
 <script>
 const audio=document.getElementById('music'),musicButton=document.getElementById('musicButton');
